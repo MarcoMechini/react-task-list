@@ -1,3 +1,4 @@
+import './App.css'
 
 function App() {
 
@@ -79,9 +80,10 @@ function App() {
     return array.map(curTask => {
       return <li key={curTask.id}>
         <h4>{curTask.title}</h4>
-        <p>{curTask.state}</p>
-        <p>{curTask.priority}</p>
-        <p>{curTask.estimatedTime}</p>
+        {/*https://stackoverflow.com/questions/36209432/how-to-dynamically-add-a-class-to-manual-class-names */}
+        <div className={curTask.state}>{curTask.state}</div>
+        <p>Priority: {curTask.priority}</p>
+        <p>Est. time {curTask.estimatedTime}</p>
       </li>
     })
   }
@@ -92,8 +94,12 @@ function App() {
 
   return (
     <>
-      {setTask(arrayUncompleted)}
-      {setTask(arrayCompleted)}
+      <h1>Task Manager</h1>
+      <h2>Current Task({arrayUncompleted.length})</h2>
+      <ul>{setTask(arrayUncompleted)}</ul>
+      <hr />
+      <h2>Completed Task({arrayCompleted.length})</h2>
+      <ul>{setTask(arrayCompleted)}</ul>
     </>
   )
 }

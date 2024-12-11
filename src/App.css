@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 8px;
+}
+
+ul,
+h2,
+h1 {
+    padding: 20px;
+}
+
+li>h4,
+li>div {
+    display: inline;
+}
+
+li>div {
+    padding: 4px 8px;
+    color: #fff;
+    margin: 4px;
+}
+
+h1 {
+    background-color: aquamarine;
+}
+
+.completed {
+    background-color: rgb(21, 228, 21);
+}
+
+.backlog {
+    background-color: rgb(235, 18, 18);
+}
+
+.in_progress {
+    background-color: rgb(230, 230, 16);
+}
